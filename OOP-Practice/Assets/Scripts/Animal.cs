@@ -7,11 +7,15 @@ public class Animal : MonoBehaviour
     public int numOfLegs;
     public string typeOfAnimal;
     public TMP_Text displayInfo;
-
-    public void AnimalSound()
+    public GameObject sphere;
+    public virtual void AnimalSound()
     {
         displayInfo.text = "No sound!";
     }
 
-    
+    public void RotateSphere()
+    {
+        sphere.transform.Rotate(Vector3.up,20.0f*Time.deltaTime);
+    }
 }
+

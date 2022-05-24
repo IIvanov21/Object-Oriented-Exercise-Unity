@@ -18,11 +18,13 @@ public class Cat : AnimalTwo
 
     public override void AnimalSound()
     {
-        displayText.text = "Meow!";
+        SetSpeed(20.0f);
+        displayText.text = "Meow! Cube speed is: "+ Mathf.FloorToInt(m_Speed);
     }
 
     public override void RotateCube()
     {
-        cube.transform.Rotate(Vector3.up,20.0f*Time.deltaTime);
+        cube.transform.Rotate(Vector3.up,m_Speed*Time.deltaTime);
+        
     }
 }

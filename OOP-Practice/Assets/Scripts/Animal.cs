@@ -4,8 +4,8 @@ using UnityEngine;
 using TMPro;
 public class Animal : MonoBehaviour
 {
-    public int numOfLegs;
-    public string typeOfAnimal;
+    public int numOfLegs { get; private set; }
+    [SerializeField] private string typeOfAnimal;
     public TMP_Text displayInfo;
     public GameObject sphere;
     public virtual void AnimalSound()
